@@ -1,0 +1,151 @@
+<!-- BY Zywexx -->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Beni Seviyor Musun?</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            font-size: 24px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #noBtn {
+            position: absolute;
+        }
+
+        #bigJ {
+            font-size: 180px;
+            color: red;
+            opacity: 0;
+            animation: none;
+            transition: all 1s ease;
+            z-index: 10;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px red; }
+            100% { text-shadow: 0 0 40px red; }
+        }
+
+        #altYazi {
+            font-size: 24px;
+            margin-top: 10px;
+            color: white;
+            opacity: 0;
+            transition: 1s;
+            z-index: 10;
+        }
+
+        .love-you {
+            position: absolute;
+            color: red;
+            animation: moveDown linear infinite;
+        }
+
+        @keyframes moveDown {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        video {
+            display: none; /* Video gizli olacak */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="question">Beni seviyor musun?</h1>
+
+    <div id="buttons">
+        <button class="btn" onclick="evetTikla()">Evet</button>
+        <button class="btn" id="noBtn" onmouseover="kac()">Hayır</button>
+    </div>
+           <!--Burayı düzenle. Yazılan yere istediğin her şeyi yazabilirsin.-->
+    <div id="bigJ">H</div>
+    <div id="altYazi"></div>
+<!-- usteki yer yazi -->
+    <!-- HTML5 video, gizlenmiş ve sesli olarak oynatılacak, loop özelliği eklendi -->
+    <video id="videoPlayer" width="640" height="360" autoplay loop>
+        <source src="sarkiniz.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        const bigJ = document.getElementById("bigJ");
+        const altYazi = document.getElementById("altYazi");
+        const videoPlayer = document.getElementById("videoPlayer");
+
+        function kac() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+
+        function evetTikla() {
+            document.getElementById("question").style.display = "none";
+            document.getElementById("buttons").style.display = "none";
+
+            bigJ.style.opacity = 1;
+            bigJ.style.animation = "glow 1.5s infinite alternate";
+
+            setTimeout(() => {
+                altYazi.style.opacity = 1;
+            }, 1000);
+
+            // Video başlat
+            videoPlayer.style.display = "none"; // Video gizli kalır
+            videoPlayer.play();
+
+            // Love you animasyonu
+            for (let i = 0; i < 50; i++) {
+                const love = document.createElement("div");
+                love.className = "love-you";
+                love.textContent = "love you";
+                love.style.left = `${Math.random() * 100}vw`;
+                love.style.top = `-${Math.random() * 100}px`;
+                love.style.fontSize = `${Math.random() * 20 + 20}px`;
+                love.style.animationDuration = `${Math.random() * 5 + 3}s`;
+                document.body.appendChild(love);
+            }
+        }
+    </script>
+
+</body>
+</html>
