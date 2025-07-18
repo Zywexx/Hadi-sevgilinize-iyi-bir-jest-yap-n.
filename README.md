@@ -12,7 +12,7 @@
 
 ---
 
-## Özellikler
+## ⭐ Özellikler
 - Kaçan buton efekti (fareyle üzerine gelince hareket eder)  
 - Etkileşimli butonlar (Evet / Hayır)  
 - Animasyonlu yazı efekti (parlayan harf ve alt yazı)  
@@ -22,19 +22,28 @@
 
 ---
 
-## Not
+## ✏️ Not
 **99. satırda `Burayı düzenle.` yazan yere istediğin kelimeyi yazabilirsin.**
 
 ---
 
-## Destek & İletişim
-💬 Destek Sunucusu: [https://discord.gg/YAEjW6drVY](https://discord.gg/YAEjW6drVY)  
+## 📷 Görüntüler
 
-👤 Geliştirici: Zywexx  
-✉️ Sorularınız için DM atabilirsiniz!
+![Önizleme](./assets/ZY.png) ![Önizleme](./assets/image.png) 
+
+> Yukarıdaki görsel, “Evet” butonuna basıldıktan sonraki ekran görünümünü temsil eder.
 
 ---
 
-## Lisans
+## 💬 Destek & İletişim
+- 💬 Destek Sunucusu: [https://discord.gg/YAEjW6drVY](https://discord.gg/YAEjW6drVY)  
+- 👤 Geliştirici: **Zywexx**  
+- ✉️ Sorularınız için DM atabilirsiniz!
+
+---
+
+## 📄 Lisans
 Bu proje [GNU Genel Kamu Lisansı v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.tr.html) ile lisanslanmıştır.  
 Yazılımı özgürce kullanabilir, değiştirebilir ve dağıtabilirsiniz; ancak aynı lisans şartlarına uymanız gerekir.
+
+---
