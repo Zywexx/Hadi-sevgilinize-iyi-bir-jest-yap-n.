@@ -1,0 +1,1 @@
+# Hadi-sevgilinize-iyi-bir-jest-yap-n.
